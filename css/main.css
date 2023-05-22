@@ -1,0 +1,272 @@
+.title {
+  text-transform: uppercase;
+  color: #232b38;
+  font-weight: 500;
+  padding: 20px;
+}
+
+#main-content {
+  padding: 8px;
+}
+
+/* start public_content */
+#jobs-data-table {
+  width: 100%;
+}
+
+#jobs-data-table tbody tr {
+  text-align: justify;
+}
+
+#jobs-data-table,
+#jobs-data-table tr,
+#jobs-data-table td {
+  border: 1px solid #232b38;
+  border-collapse: collapse;
+}
+
+#jobs-data-table thead td {
+  text-align: center;
+  font-weight: bold;
+  background: #232b38;
+  color: #fff;
+}
+
+#jobs-data-table td {
+  padding: 8px;
+}
+
+#public-content,
+#private_content {
+  margin: 100px auto;
+  max-width: 1200px;
+}
+
+.jobs-data-description {
+  font-size: small;
+}
+
+#show-more-jobs {
+  padding: 8px;
+  text-align: center;
+  margin: 10px auto;
+  border: 1px solid;
+  /* background: ; */
+  font-style: italic;
+  font-size: small;
+  border-radius: 7px;
+  cursor: pointer;
+  color: #1d80eb;
+  width: fit-content;
+  transition: all 0.3s ease-out;
+  width: 200px;
+}
+
+#show-more-jobs:hover {
+  background: #1d80eb;
+  color: #fff;
+}
+
+#filter-jobs-form {
+  display: flex;
+  align-items: center;
+  padding: 11px;
+  gap: 10px;
+}
+
+#search_jobs_location {
+  padding: 8px;
+  width: 300px;
+}
+
+#jobs-categorie {
+  padding: 8px;
+  cursor: pointer;
+}
+
+#filter-jobs-form input[type="submit"] {
+  padding: 8px;
+  text-transform: capitalize;
+}
+
+/* end public_content */
+
+/* start private_content */
+#private_content {
+}
+
+#pop-apercu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #232b3875;
+  border-radius: 10px;
+  margin: 0;
+}
+
+#pop-apercu .pop-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 10px;
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  height: 600px;
+}
+
+#pop-apercu .pop-content .header-top {
+  background: #232b38;
+  height: 50px;
+  border-radius: 10px 10px 0 0;
+}
+
+#pop-apercu .pop-content .apercu-content {
+  flex: 1;
+  padding: 15px;
+  overflow: scroll;
+}
+
+#pop-apercu .pop-content .apercu-content h1 {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 20px 0;
+}
+
+#pop-apercu .pop-content .apercu-content .infos {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#pop-apercu .pop-content .apercu-content .infos .info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#pop-apercu .pop-content .apercu-content .infos span {
+  text-transform: uppercase;
+}
+
+#pop-apercu .pop-content .apercu-content .infos .info p {
+  font-style: italic;
+  font-size: small;
+  color: #5e5e5e;
+}
+
+#pop-apercu .pop-content .apercu-content .infos .info svg {
+  width: 20px;
+  height: 20px;
+  fill: #1d80eb;
+}
+
+#pop-apercu .X-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+#pop-apercu .X-close svg {
+  fill: #cd1d1d;
+}
+
+#additional_infos .additional_infos_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+#content-container {
+  margin-left: 20px;
+}
+
+#content-container div {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+#content-container div p {
+  font-style: italic;
+  font-size: small;
+  color: #5e5e5e;
+}
+
+#content-container div {
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+}
+
+#content-container div span {
+  color: #1d81eb9d;
+  text-transform: uppercase;
+}
+
+#add-new-heading-form {
+  display: flex;
+  margin: 20px 0;
+  gap: 5px;
+}
+
+#add-new-heading-form label {
+  text-transform: capitalize;
+}
+
+#create-new-job table td {
+  margin: 0 10px;
+}
+
+.delete-heading-btn {
+  background-color: red;
+  color: #fff;
+  padding: 6px;
+  font-size: small;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#private_content .haut-bas-container {
+  display: flex;
+  gap: 4px;
+}
+
+#private_content input[type="text"] {
+  padding: 5px;
+  outline: none;
+}
+
+#private_content .haut-bas-container div {
+  background-color: #232b38;
+  color: #fff;
+  padding: 6px;
+  font-size: small;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#private_content .haut-bas-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.invalid-input {
+  border: 1px solid red;
+}
+
+.disabled-btn {
+  opacity: 0.4;
+}
+
+/* end private_content */

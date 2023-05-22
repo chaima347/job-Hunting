@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <title>login</title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/logo.ico" />
+
+    <!-- end scripts -->
+    <script type="module" src="../js/firebase.js"></script>
+    <script src="../js/components/header.js"></script>
+    <script src="../js/components/footer.js"></script>
+    <!-- start scripts -->
+  </head>
+  <body>
+    <!-- start loader  -->
+    <div id="loader"></div>
+    <!-- end loader  -->
+
+    <!-- start header -->
+    <header></header>
+    <!-- end header -->
+
+    <!-- start main content -->
+    <div id="main-content">
+      <form id="login-form">
+        <div class="top">
+          <img src="../images/login-bg1.jpg" alt="" />
+        </div>
+        <div class="bottom">
+          <p id="message"></p>
+          <label for="email" class="required">email</label>
+          <input type="email" name="email" id="email" required />
+          <label for="password" class="required">password</label>
+          <input type="password" name="password" id="password" required />
+          <input
+            id="login-form-btn"
+            class="btn-primary"
+            type="submit"
+            value="Continue"
+          />
+        </div>
+      </form>
+    </div>
+    <!-- end main content -->
+
+    <!-- start footer -->
+    <footer></footer>
+    <!-- end footer -->
+
+    <!-- start scripts -->
+    <script type="module" src="../js/firebase.js"></script>
+    <!-- end scripts -->
+  </body>
+</html>

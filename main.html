@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/global.css" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/logo.ico" />
+
+    <!-- end scripts -->
+    <script type="module" src="js/firebase.js"></script>
+    <script src="js/components/header.js"></script>
+    <script src="js/components/footer.js"></script>
+    <script src="js/components/categorie_options.js"></script>
+    <script src="js/components/location_options.js"></script>
+    <script src="js/main.js"></script>
+    <!-- start scripts -->
+    <title>main</title>
+  </head>
+  <body>
+    <!-- start loader -->
+    <div id="loader"></div>
+    <!-- end loader -->
+
+    <!-- start header -->
+    <header></header>
+    <!-- end header -->
+
+    <!-- start main content -->
+    <div id="pop-apercu">
+      <div class="pop-content">
+        <div class="header-top">
+          <div class="X-close" onclick="close_pop_apercu()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="apercu-content">
+          <h1 id="nom-apercu"></h1>
+          <!-- start infos -->
+          <div id="additional_infos">
+            <div id="content-container"></div>
+          </div>
+          <!-- end infos -->
+        </div>
+      </div>
+    </div>
+    <div id="main-content">
+      <div id="private_content">
+        <h1 class="title">
+          Post a job for <span class="underline"> New Participants!</span>
+        </h1>
+
+        <form id="add-new-heading-form">
+          <label for="add-new-heading">nouveau rubrique</label>
+          <input
+            type="text"
+            name="add_new_heading"
+            id="add-new-heading"
+            required
+          />
+          <input type="submit" value="add" class="btn-primary" />
+        </form>
+        <hr />
+        <form id="create-new-job" onsubmit="handle_create_new_job(event)">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <label class="required">nom</label>
+                </td>
+                <td>
+                  <input
+                    oninput="validate_create_job_post_input(this)"
+                    type="text"
+                    name="nom"
+                    id="post-job-nom"
+                  />
+                </td>
+                <td class="haut-bas-container">
+                  <div class="haut-btn" onclick="move_up(this)">haut</div>
+                  <div
+                    class="bas-btn"
+                    onclick="move_down(this)"
+                    onclick="move_down(this)"
+                  >
+                    bas
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="required">description</label>
+                </td>
+                <td>
+                  <input
+                    oninput="validate_create_job_post_input(this)"
+                    type="text"
+                    name="description"
+                    id="post-job-description"
+                  />
+                </td>
+                <td class="haut-bas-container">
+                  <div class="haut-btn" onclick="move_up(this)">haut</div>
+                  <div class="bas-btn" onclick="move_down(this)">bas</div>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label class="required">intitulé du post</label>
+                </td>
+                <td>
+                  <input
+                    oninput="validate_create_job_post_input(this)"
+                    type="text"
+                    name="intitule"
+                    id="post-job-intitule"
+                  />
+                </td>
+                <td class="haut-bas-container">
+                  <div class="haut-btn" onclick="move_up(this)">haut</div>
+                  <div class="bas-btn" onclick="move_down(this)">bas</div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="required">location</label>
+                </td>
+                <td>
+                  <input
+                    oninput="validate_create_job_post_input(this)"
+                    type="text"
+                    name="location"
+                    id="post-job-location"
+                  />
+                </td>
+                <td class="haut-bas-container">
+                  <div class="haut-btn" onclick="move_up(this)">haut</div>
+                  <div class="bas-btn" onclick="move_down(this)">bas</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <input
+            id="create-new-job-btn"
+            type="submit"
+            value="create"
+            disabled
+            class="btn-primary disabled-btn"
+          />
+          <button
+            type="button"
+            id="apercu-new-job-btn"
+            class="flipped-btn-primary simple-btn disabled-btn"
+            onclick="apercu()"
+            disabled
+          >
+            Aperçu
+          </button>
+        </form>
+      </div>
+      <hr />
+      <div id="public-content">
+        <h1 class="title">
+          search for your <span class="underline"> dream job!</span>
+        </h1>
+        <form id="filter-jobs-form">
+          <label for="search_jobs_location">location : </label>
+          <input
+            type="text"
+            name="search_jobs_location"
+            id="search_jobs_location"
+            list="jobs-location-list"
+          />
+          <datalist id="jobs-location-list"></datalist>
+          <select name="search_jobs_categorie" id="jobs-categorie"></select>
+          <label for="jobs-descending">descending</label>
+          <input type="checkbox" name="jobs-descending" id="jobs-descending" />
+          <input class="flipped-btn-primary" type="submit" value="filter" />
+        </form>
+        <table id="jobs-data-table">
+          <thead>
+            <tr>
+              <td>nom</td>
+              <td>description</td>
+              <td>date de publication</td>
+              <td>locations</td>
+              <td>categories</td>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div id="show-more-jobs" onclick="load_jobs_page()">show more jobs</div>
+      </div>
+    </div>
+    <!-- end main content -->
+
+    <!-- start footer -->
+    <footer></footer>
+    <!-- end footer -->
+
+    <!-- start scripts -->
+    <script type="module" src="js/firebase.js"></script>
+    <!-- end scripts -->
+  </body>
+</html>
