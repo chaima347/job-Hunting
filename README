@@ -1,4 +1,52 @@
-main-color: #232b38
-secondary-color: #1d80eb
-white-color: #f9f8f7
-weak-color: #a4a8aa
+# Job Hunting Website - Connecting Talent with Opportunities
+
+This **Job Hunting Website** is designed to bridge the gap between job seekers and employers, offering a user-friendly and feature-rich platform to simplify the job search and recruitment process. The platform aims to create meaningful connections, empowering users to achieve their career goals and helping employers find the right talent.
+
+## Features
+
+### For Job Seekers
+- **Profile Management**: Create and update professional profiles with ease.
+- **Job Search**: Search for jobs using filters like location, industry, and job type.
+- **Resume Upload**: Upload resumes for direct application to job listings.
+- **Job Alerts**: Get notified about new job opportunities that match your profile.
+- **Application Tracking**: Keep track of all submitted job applications.
+
+### For Employers
+- **Job Posting**: Post job openings with detailed descriptions and requirements.
+- **Candidate Search**: Browse and filter candidates based on skills, experience, and location.
+- **Resume Database**: Access a pool of resumes for potential hires.
+- **Application Management**: View, shortlist, and manage applications in real-time.
+
+### Additional Features
+- **Messaging System**: Enable direct communication between job seekers and employers.
+- **Analytics Dashboard**: Insights into job postings, applications, and profile views.
+- **Role-Based Access**: Separate interfaces for job seekers, employers, and administrators.
+
+## Technologies Used
+
+- **Frontend**:
+  - React.js or Angular for a dynamic and responsive user interface.
+  - Tailwind CSS or Bootstrap for modern design.
+
+- **Backend**:
+  - Node.js with Express for server-side logic and API development.
+  - MongoDB or PostgreSQL for database management.
+
+- **Authentication**:
+  - Secure login using JWT for job seekers and employers.
+  - OAuth integration for social media logins (e.g., Google, LinkedIn).
+
+## Folder Structure
+
+- `src/components/`: Reusable UI components for various platform features.
+- `src/pages/`: Main pages (e.g., Home, Login, Dashboard, Job Listings).
+- `src/services/`: Backend API service integration.
+- `src/styles/`: Custom styles and theme configurations.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+We thank all job seekers, employers, and career experts who inspired the development of this platform. Together, we aim to make job hunting and recruitment efficient and accessible for everyone.
